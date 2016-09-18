@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="cv_tamanio_nombre">20dp</dimen>
+    <dimen name="layout_marginRight_hueso_blanco">10dp</dimen>
+    <dimen name="layout_marginTop_dato_mascota">10dp</dimen>
+    <dimen name="elevacion_actionbar">4dp</dimen>
+    <dimen name="tamanio_titulo">18dp</dimen>
+</resources>

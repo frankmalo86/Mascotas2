@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mascotas</string>
+    <string name="nombre">Lucky</string>
+    <string name="cantidad_votos">0</string>
+    <array name="pmascotas">
+        <item>pmascota1</item>
+        <item>pmascota2</item>
+        <item>pmascota3</item>
+        <item>pmascota4</item>
+        <item>pmascota5</item>
+    </array>
+</resources>
