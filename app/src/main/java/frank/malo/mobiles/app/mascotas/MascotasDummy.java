@@ -6,9 +6,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import frank.malo.mobiles.app.mascotas.adaptadores.MascotaAdaptador;
+import frank.malo.mobiles.app.mascotas.pojo.Mascota;
 
 public class MascotasDummy extends AppCompatActivity {
     ArrayList<Mascota> mascotasSeleccionadas;

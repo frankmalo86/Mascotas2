@@ -7,4 +7,10 @@
     <dimen name="layout_marginTop_dato_mascota">10dp</dimen>
     <dimen name="elevacion_actionbar">4dp</dimen>
     <dimen name="tamanio_titulo">18dp</dimen>
+    <dimen name="nombre_contacto">33dp</dimen>
+    <dimen name="telefono_contacto">20dp</dimen>
+    <dimen name="top">20dp</dimen>
+    <dimen name="left">10dp</dimen>
+    <dimen name="margin_top_viwes">10dp</dimen>
+    <dimen name="margin_top_layout">40dp</dimen>
 </resources>

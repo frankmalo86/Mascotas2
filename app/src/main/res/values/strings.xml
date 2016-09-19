@@ -9,4 +9,21 @@
         <item>pmascota4</item>
         <item>pmascota5</item>
     </array>
+    <string name="menu_contacto">contacto</string>
+    <string name="menu_acerca_de">acerca_de</string>
+    <string name="texto_contacto">Contacto</string>
+    <string name="texto_acerca_de">Acerca De</string>
+    <string name="nombre_contacto">Frank Malo</string>
+    <string name="telefono_contacto">0939630219</string>
+    <string name="email_contacto">frankmalo86@gmail.com</string>
+
+    <string name="hint_nombre_completo">Nombre Completo</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="hint_mensaje">Mensaje</string>
+    <string name="btn_enviar_comentarios">Enviar comentarios</string>
+
+    <string name="mensaje_enviado">Mensaje enviado !!</string>
+    <string name="enviando_mensaje">Enviando mensaje, por favor espere !!</string>
+    <string name="espera_mensaje">por favor espere !!</string>
+    <string name="titulo_mail">Mascotas 2</string>
 </resources>

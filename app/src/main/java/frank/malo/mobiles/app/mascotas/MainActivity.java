@@ -1,18 +1,22 @@
 package frank.malo.mobiles.app.mascotas;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
+import frank.malo.mobiles.app.mascotas.adaptadores.MascotaAdaptador;
+import frank.malo.mobiles.app.mascotas.pojo.Mascota;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar miActionBar = (Toolbar) findViewById(R.id.actionBar_activityMain);
         miActionBar.setTitle("");
-        //miActionBar.setTextAlignment(Toolbar.TEXT_ALIGNMENT_CENTER);
         setSupportActionBar(miActionBar);
 
         listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
@@ -92,5 +95,30 @@ public class MainActivity extends AppCompatActivity {
         MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, this);
         listaMascotas.setAdapter(adaptador);
     }
+
+
+    /**************************   MENÚ DE OPCIONES   *********************************/
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_opciones, menu);
+        return true;
+    }
+
+    //aqui podemos controlar lo que sucede con about o con settings
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_contacto:
+                Intent intentContacto = new Intent(this, ContactoActivity.class);
+                startActivity(intentContacto);
+                break;
+            case R.id.menu_acerca_de:
+                Intent intentAcercaDe = new Intent(this, AcercaDeActivity.class);
+                startActivity(intentAcercaDe);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    /***********************************************************************************/
 
 }

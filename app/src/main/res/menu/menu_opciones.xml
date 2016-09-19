@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/menu_contacto"
+    android:title="@string/texto_contacto"
+    android:orderInCategory="100"
+    ></item>
+<item
+    android:title="@string/texto_acerca_de"
+    android:id="@+id/menu_acerca_de"
+    android:orderInCategory="101"
+    ></item>
+</menu>

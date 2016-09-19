@@ -5,4 +5,7 @@
     <color name="colorAccent">#536DFE</color>
     <color name="primaryText">#212121</color>
     <color name="secondaryText">#757575</color>
+    <color name="background">#eeffee</color>
+    <color name="botonHighlight">#757575</color>
+    <color name="blanco">#FFFFFF</color>
 </resources>
