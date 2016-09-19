@@ -1,4 +1,4 @@
-package frank.malo.mobiles.app.mascotas;
+package frank.malo.mobiles.app.mascotas.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import frank.malo.mobiles.app.mascotas.R;
 import frank.malo.mobiles.app.mascotas.adaptadores.MascotaAdaptador;
 import frank.malo.mobiles.app.mascotas.pojo.Mascota;
 

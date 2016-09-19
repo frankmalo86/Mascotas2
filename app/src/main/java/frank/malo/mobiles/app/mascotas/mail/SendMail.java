@@ -3,7 +3,6 @@ package frank.malo.mobiles.app.mascotas.mail;
 /**
  * Created by Frank on 19/09/2016.
  */
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -20,7 +19,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import frank.malo.mobiles.app.mascotas.MainActivity;
+import frank.malo.mobiles.app.mascotas.activities.MainActivity;
 import frank.malo.mobiles.app.mascotas.R;
 
 /**

@@ -1,4 +1,4 @@
-package frank.malo.mobiles.app.mascotas;
+package frank.malo.mobiles.app.mascotas.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +15,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.MimeMessage;
 
+import frank.malo.mobiles.app.mascotas.R;
 import frank.malo.mobiles.app.mascotas.mail.SendMail;
 
 public class ContactoActivity extends AppCompatActivity {

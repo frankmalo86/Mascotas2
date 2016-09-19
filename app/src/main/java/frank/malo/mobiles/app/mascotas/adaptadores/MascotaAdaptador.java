@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import frank.malo.mobiles.app.mascotas.MainActivity;
+import frank.malo.mobiles.app.mascotas.activities.MainActivity;
 import frank.malo.mobiles.app.mascotas.R;
 import frank.malo.mobiles.app.mascotas.pojo.Mascota;
 

@@ -1,7 +1,9 @@
-package frank.malo.mobiles.app.mascotas;
+package frank.malo.mobiles.app.mascotas.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import frank.malo.mobiles.app.mascotas.R;
 
 public class AcercaDeActivity extends AppCompatActivity {
 
