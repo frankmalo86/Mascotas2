@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mascotas</string>
+    <string name="app_name">Mascotas 2</string>
     <string name="nombre">Lucky</string>
     <string name="cantidad_votos">0</string>
     <array name="pmascotas">
@@ -26,4 +26,14 @@
     <string name="enviando_mensaje">Enviando mensaje, por favor espere !!</string>
     <string name="espera_mensaje">por favor espere !!</string>
     <string name="titulo_mail">Mascotas 2</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="nombre_mi_mascota">Negrito</string>
+    <string name="bio">Master en Sistemas de Información Gerencial\nIngeniero en Computación\nIntereses en Desarrollo, Análisis y mineria de datos,
+        automatización de Procesos.
+    </string>
+
+    <string name="error_validacion_mail">Error, todos los campos deben estar llenos</string>
 </resources>

@@ -21,14 +21,25 @@
         <activity
             android:name=".activities.MascotasDummy"
             android:parentActivityName=".activities.MainActivity">
-
-            <!-- SOporte para versiones 4.0 o menos -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
         </activity>
-        <activity android:name=".activities.ContactoActivity" />
-        <activity android:name=".activities.AcercaDeActivity"></activity>
+        <activity
+            android:name=".activities.ContactoActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.AcercaDeActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity android:name=".tarjetas.cardview_mi_mascota"></activity>
     </application>
 
 </manifest>

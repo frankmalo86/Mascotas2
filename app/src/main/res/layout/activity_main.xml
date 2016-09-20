@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <include android:id="@+id/actionBar_activityMain"
-        layout="@layout/appbar">
-    </include>
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout">
 
-    <android.support.v7.widget.RecyclerView
+        <include
+            android:id="@+id/toolbar_principal"
+            layout="@layout/toolbar_principal">
+        </include>
+
+        <include
+            android:id="@+id/toolbar_tab"
+            layout="@layout/toolbar_tab">
+        </include>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rvMascotas"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/actionBar_activityMain"
-        >
-
-    </android.support.v7.widget.RecyclerView>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </android.support.v4.view.ViewPager>
 
 
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

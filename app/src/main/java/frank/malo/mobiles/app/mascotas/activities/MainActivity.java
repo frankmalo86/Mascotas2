@@ -1,6 +1,9 @@
 package frank.malo.mobiles.app.mascotas.activities;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,86 +20,38 @@ import java.util.Comparator;
 
 import frank.malo.mobiles.app.mascotas.R;
 import frank.malo.mobiles.app.mascotas.adaptadores.MascotaAdaptador;
+import frank.malo.mobiles.app.mascotas.adaptadores.PageAdapter;
+import frank.malo.mobiles.app.mascotas.fragments.mainFragment;
+import frank.malo.mobiles.app.mascotas.fragments.perfilFragment;
 import frank.malo.mobiles.app.mascotas.pojo.Mascota;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Mascota> mascotas;
-    private RecyclerView listaMascotas;
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar miActionBar = (Toolbar) findViewById(R.id.actionBar_activityMain);
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.toolbar_principal);
         miActionBar.setTitle("");
         setSupportActionBar(miActionBar);
 
-        listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
+        /*******************************************************/
+        toolbar = (Toolbar) findViewById(R.id.toolbar_principal);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaMascotas.setLayoutManager(llm);
+        setUpViewPager();
 
-        ImageView img5Stars = (ImageView) findViewById(R.id.img5Stars);
-        img5Stars.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //ordeno el arraylist utilizando el método sort de la interfaz Collections para poder tener las mascotas con mayor puntaje
-                //en los primeros indices del objeto.
-                ordenarMascotas();
-                //envio los datos valiendome de un array en el archivo string.xml
-                enviarDatos();
-            }
-        });
-
-        inicializarListaMascotas();
-        inicializarAdaptador();
-
-    }
-
-    public void enviarDatos(){
-        Intent intent = new Intent(this, MascotasDummy.class);
-        int tamanio = getResources().getTextArray(R.array.pmascotas).length;
-        for (int i=0; i<tamanio; i++){
-            //todo: validar que no se sobrepase el tamaño de la cantidad de mascotas en el arrayList
-            intent.putExtra(getResources().getTextArray(R.array.pmascotas)[i].toString(), mascotas.get(i));
+        if (toolbar == null){
+            setSupportActionBar(toolbar);
         }
-        startActivity(intent);
-    }
-
-    public void ordenarMascotas(){
-        Collections.sort(mascotas, new Comparator<Mascota>() {
-            @Override
-            public int compare(Mascota m1, Mascota m2) {
-                if (m1.getPuntaje() > m2.getPuntaje())  return -1;
-                else if (m1.getPuntaje() == m2.getPuntaje())  return 0;
-                else return 1;
-            }
-        });
-    }
-
-    public void inicializarListaMascotas(){
-        mascotas = new ArrayList<Mascota>();
-        mascotas.add(new Mascota(R.drawable.perro1, "Lucky"));
-        mascotas.add(new Mascota(R.drawable.gato1, "bola de nieve"));
-        mascotas.add(new Mascota(R.drawable.perro2, "Firulo"));
-        mascotas.add(new Mascota(R.drawable.gato2, "Silvestre"));
-        mascotas.add(new Mascota(R.drawable.perro3, "Toba"));
-        mascotas.add(new Mascota(R.drawable.gato3, "Nikita"));
-        mascotas.add(new Mascota(R.drawable.perro4, "Lycan"));
-        mascotas.add(new Mascota(R.drawable.gato4, "Sombra"));
-        mascotas.add(new Mascota(R.drawable.perro5, "Sultán"));
-        mascotas.add(new Mascota(R.drawable.perro6, "Spencer"));
 
     }
-
-    public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, this);
-        listaMascotas.setAdapter(adaptador);
-    }
-
 
     /**************************   MENÚ DE OPCIONES   *********************************/
     @Override
@@ -121,5 +76,24 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     /***********************************************************************************/
+
+    /*****************************************************************************/
+    private ArrayList<Fragment> agregarFragments(){
+        ArrayList<Fragment> fragments = new ArrayList<Fragment>();
+        fragments.add(new mainFragment());
+        fragments.add(new perfilFragment());
+        return fragments;
+    }
+
+    private void setUpViewPager(){
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragments()));
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_dog);
+    }
+
+    /*****************************************************************************/
+
+
 
 }

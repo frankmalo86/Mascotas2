@@ -17,6 +17,12 @@ public class Mascota implements Serializable{
         this.puntaje = 0;  //valor inicial cuando se instancia la clase
     }
 
+    public Mascota(int foto, String nombre, int puntaje) {
+        this.nombre = nombre;
+        this.foto = foto;
+        this.puntaje = puntaje;  //valor inicial cuando se instancia la clase
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -38,7 +44,6 @@ public class Mascota implements Serializable{
     }
 
     public void setPuntaje(int puntaje) {
-        if (this.puntaje >= 5) puntaje = 5;
         this.puntaje = puntaje;
     }
 }

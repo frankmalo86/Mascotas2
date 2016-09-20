@@ -13,4 +13,7 @@
     <dimen name="left">10dp</dimen>
     <dimen name="margin_top_viwes">10dp</dimen>
     <dimen name="margin_top_layout">40dp</dimen>
+    <dimen name="ancho_imagen">150dp</dimen>
+    <dimen name="alto_imagen">150dp</dimen>
+    <dimen name="nombre_mi_mascota">20dp</dimen>
 </resources>

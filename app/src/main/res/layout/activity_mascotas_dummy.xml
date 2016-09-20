@@ -5,8 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".activities.MascotasDummy">
 
-    <include android:id="@+id/actionBar_activityMain"
-        layout="@layout/appbar">
+    <include
+        android:id="@+id/toolbar_principal"
+        layout="@layout/toolbar_principal">
     </include>
 
     <android.support.v7.widget.RecyclerView
@@ -14,7 +15,7 @@
         android:layout_height="match_parent"
         android:id="@+id/rvMascotasDummi"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/actionBar_activityMain"
+        android:layout_below="@id/toolbar_principal"
         >
     </android.support.v7.widget.RecyclerView>
 

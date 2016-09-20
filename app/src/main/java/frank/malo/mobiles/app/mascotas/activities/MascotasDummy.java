@@ -22,11 +22,10 @@ public class MascotasDummy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mascotas_dummy);
 
-        Toolbar miActionBar = (Toolbar) findViewById(R.id.actionBar_activityMain);
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.toolbar_principal);
         miActionBar.setTitle("");
         setSupportActionBar(miActionBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         ImageView img5Stars = (ImageView) findViewById(R.id.img5Stars);
         img5Stars.setVisibility(ImageView.GONE);
 
